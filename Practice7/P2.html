@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Changes</title>
+    <style>
+        /* Add some initial styles for better visualization */
+        .example {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        div p:first-child {
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sample content -->
+<div>
+    <p class="example">This is the first paragraph with class "example".</p>
+    <p>This is another paragraph.</p>
+</div>
+
+<a href="#">Link with target attribute</a><br>
+
+<button onclick="changeStyles()">Change</button>
+
+<script>
+    function changeStyles() {
+        // Add background color to the first p element with class "example"
+        var exampleParagraph = document.querySelector('.example');
+        if (exampleParagraph) {
+            exampleParagraph.style.backgroundColor = 'yellow';
+        }
+
+        // Add a red border to the first link with a target attribute
+        var linkWithTarget = document.querySelector('a');
+        if (linkWithTarget) {
+            linkWithTarget.style.border = '2px solid red';
+        }
+
+        // Change font size and color of the first p element in a div
+        var divParagraph = document.querySelector('div p:first-child');
+        if (divParagraph) {
+            divParagraph.style.fontSize = '20px';
+            divParagraph.style.color = 'blue';
+        }
+    }
+</script>
+
+</body>
+</html>

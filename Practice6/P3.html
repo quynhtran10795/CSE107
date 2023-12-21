@@ -1,0 +1,122 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr{
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+        table tr th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Arrays</h1>
+    <h2>The sort() Method</h2>
+    <p>Sort car objects on age:</p>
+    <p id="sort"></p>
+    <img id="product1" src="img\LearningHowtoLearn.jpg" alt="Learning How to Learn" width="304" height="228">
+    <img id="product2" src="img\TheAlchemist.jpg" alt="The Alchemist" width="304" height="228">
+    <img id="product3" src="img\ThinkingFastandSlow.jpg" alt="Thinking, Fast and Slow" width="304" height="228">
+    <script>
+    
+    const products = [{name:"Learning How to Learn", image: document.getElementById("product1").src, price: 251100},
+                    {name:"The Alchemist", image: document.getElementById("product2"), price: 182700},
+                    {name:"Thinking, Fast and Slow", image: document.getElementById("product3"), price: 299700}] 
+    displayProducts();
+    products.sort(function(a, b){return a.price - b.price});
+    displayProducts();
+    function displayProducts() {
+    document.getElementById("sort").innerHTML = products[0].name + "<br>" + products[0].price +"<br>"
+     +   products[1].name + "<br>"+  products[1].price + "<br>" +
+    products[2].name + "<br>" +  + products[2].price;
+    }
+    </script>
+        
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
+    <script src="https://unpkg.com/currency.js@~2.0.0/dist/currency.min.js"></script>
+
+    <title>Problem 3</title>
+    <style>
+        img {
+            width: 304px;
+            height: auto;
+        }
+        table td{
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid black;
+        }
+        p{
+            font-size: large;
+            font-weight: bolder;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <article>
+                    <img src="" alt="">
+                    <div class="title">Title</div>
+                    <div class="price">0</div>
+                </article>
+            </div>
+        </div>
+    </div> -->
+    <table>
+        <td>
+            <p id = "name0"></p>
+            <img id="product0" >
+            <p id = "price0"></p>
+        </td>
+        <td>
+            <p id = "name1"></p>
+            <img id="product1" >
+            <p id = "price1"></p>
+        </td>
+        <td>
+            <p id = "name2"></p>
+            <img id="product2" >
+            <p id = "price2"></p>
+        </td>
+    </table>
+        <script>
+        const arr = [{name:"Learning How to Learn", image: "img/LearningHowtoLearn.jpg", price: 251100},
+                    {name:"The Alchemist", image: "img/TheAlchemist.jpg", price: 182700},
+                    {name:"Thinking, Fast and Slow", image: "img/ThinkingFastandSlow.jpg", price: 299700}];
+        arr.sort(function(a, b) {
+            return a.price - b.price;
+        });
+       for(let index in arr) {
+        document.getElementById("name"+index).innerHTML = arr[index].name;
+        document.getElementById("product" + index).src = arr[index].image;
+        document.getElementById("price"+index).innerHTML = new Intl.NumberFormat('en-DE').format(arr[index].price)+" VND";
+       }
+       const VND = new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+        });
+    </script>
+  </body>
+</html>

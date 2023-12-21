@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+    height: 300px;
+}
+
+.column img:hover {
+    transform: scale(1.2);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  border: 1px solid red;
+  background-color: aliceblue;
+  position: absolute;
+  top: 3%;
+  left: 13%;
+  color: black;
+  font-size: 35px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 8%;
+  left: 13%;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>Tabbed Image Gallery</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="img_Practice7/small_image1.jpg" alt="The Davinci Code" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_Practice7/small_image2.jpg" alt="English For Tech" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_Practice7/small_image3.jpg" alt="Harry Potter" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_Practice7/small_image4.jpg" alt="Giáo Trình Tin Học" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:80%; height: 950px; margin-left: 10%;margin-top: 6%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

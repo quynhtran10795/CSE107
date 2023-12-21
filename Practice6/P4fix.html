@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <script>
+        // Create an array that contains a product list
+        let productList = [
+            { id: 1, name: "Laptop", quantity: 5, price: 1200, image: "laptop_image.jpg" },
+            { id: 2, name: "Phone", quantity: 10, price: 800, image: "phone_image.jpg" },
+            { id: 3, name: "Tablet", quantity: 8, price: 500, image: "tablet_image.jpg" }
+        ];
+
+        // Sort the product list by the product name
+        productList.sort((a, b) => a.name.localeCompare(b.name));
+
+        // Print the products in the list
+        function printProducts() {
+            productList.forEach(product => {
+                console.log(`ID: ${product.id}, Name: ${product.name}, Quantity: ${product.quantity}, Price: ${product.price}, Image: ${product.image}`);
+            });
+        }
+
+        // Add a new product to the head of the list
+        function addToHead(newProduct) {
+            productList.unshift(newProduct);
+        }
+
+        // Add a new product to the tail of the list
+        function addToTail(newProduct) {
+            productList.push(newProduct);
+        }
+
+        // Search products by the product name
+        function searchByName(name) {
+            return productList.filter(product => product.name === name);
+        }
+
+        // Remove the product by the product ID
+        function removeById(id) {
+            productList = productList.filter(product => product.id !== id);
+        }
+
+        // Edit the product detail by the product ID
+        function editById(id, updatedProduct) {
+            let index = productList.findIndex(product => product.id === id);
+            if (index !== -1) {
+                productList[index] = updatedProduct;
+            }
+        }
+
+        // Example usage:
+
+        // Print initial products
+        console.log("Initial Products:");
+        printProducts();
+
+        // Add a new product to the head
+        let newProductHead = { id: 4, name: "Smartwatch", quantity: 15, price: 200, image: "watch_image.jpg" };
+        addToHead(newProductHead);
+
+        // Add a new product to the tail
+        let newProductTail = { id: 5, name: "Camera", quantity: 3, price: 600, image: "camera_image.jpg" };
+        addToTail(newProductTail);
+
+        // Search for a product by name
+        let searchResult = searchByName("Tablet");
+        console.log("\nSearch Result:");
+        searchResult.forEach(product => {
+            console.log(`ID: ${product.id}, Name: ${product.name}, Quantity: ${product.quantity}, Price: ${product.price}, Image: ${product.image}`);
+        });
+
+        // Remove a product by ID
+        removeById(2);
+
+        // Edit a product by ID
+        let editedProduct = { id: 3, name: "Updated Tablet", quantity: 10, price: 550, image: "updated_tablet_image.jpg" };
+        editById(3, editedProduct);
+
+        // Print updated products
+        console.log("\nUpdated Products:");
+        printProducts();
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    width: auto;
+    margin-bottom: 4px;
+}
+#logo img { 
+    border: none; 
+    vertical-align: top;
+    width: 300px;
+    height: 160px;
+}
+#logo{
+    float: left;
+}
+#login{
+    text-align: right;
+    float:right;
+    position: relative;
+    top: 140px;
+}
+#login a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: blue;
+    margin-right: 5px;
+    border-right: 1px solid black;
+    padding-right: 7px;
+}
+#login a.last {
+    border-right: none;
+    padding-right: 0;
+}
+#login a:hover{
+    color:#900;
+}
+nav{
+    clear: both;
+    width: auto;
+    height: auto;
+    border: solid 1px white;
+    border-bottom-color: #1d3c03;
+}
+#subnav{
+    float: right;
+}
+#subnav input{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul{
+    height: 22px;
+    padding: 12px 0;
+    float: left;
+    margin-left: 50px;
+}
+nav ul li {
+    border-right: solid 1px black;
+    display: inline;
+    padding: 0 10px;
+}
+#gnav ul li a{
+    color: rgb(214, 75, 19);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+#gnav ul li a:hover{
+    border-bottom:5px solid #206AB5;
+}
+/*Body*/
+#body{
+    clear: both;
+    width: auto;
+    margin: 5px 5px;
+    background-color:#edeaea;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+article{
+    display: table-row;
+}
+#left, #right, section{
+    display: table-cell;
+    vertical-align: top;
+}
+#left,#right{
+    width: 20%;
+}
+/*aside left*/
+#left div{
+    border: 1px solid blue;
+    border-radius: 4px;
+    margin-top: 10px;
+    height: 320px;
+    display: inline-block;
+    width: 100%;
+}
+#left div p{
+    background-color: #206AB5;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: aliceblue;
+    text-align: center;
+}
+#left div ul{
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#left div ul li{
+    height: 25px;
+    list-style-position: inside;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+#left div ul li a{
+    text-decoration: none;
+}
+aside ul li:hover a{
+    color: #900;
+}
+/*aside right*/
+#right div{
+    border: 1px solid blue;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+#right div p{
+    background-color: #206AB5;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: aliceblue;
+    text-align: center;
+    padding: 5px;
+}
+#bestseller marquee h5{
+    clear: both;
+    text-align: center;
+}
+#bestseller img{
+    width:100px;
+    height:100px;
+    padding-left:5px;
+    float:left;
+    margin-bottom:5px;
+}
+#bestseller a{
+    text-decoration:none;
+    font-size:16px;
+    font-family:Arial;
+    color:#1d3c03;
+    height:60px;
+    
+}
+#bestseller a:hover{
+    font-weight:bold;
+}
+/*linkweb*/
+#linkweb select{
+    margin:20px;
+    width:260px;
+    height:40px;
+    border-radius:3px;
+    border:#808080 solid 1px;
+    text-align:center;
+    font-size: 16px;
+}
+#access{
+    background-color:#e1ebf3;
+}
+
+#access h4{
+     margin-top:10px;
+     padding-left: 20px;
+     font-size: 16px;
+     color:red;
+}
+/*section*/
+#accordion{
+    clear: both;
+    font-size: 16px;
+}
+section div p{
+    margin: 10px 0px;
+}
+section table{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 20px;
+}
+section form div{
+    text-align: center;
+}
+/*footer*/
+footer{
+    clear: both;
+    background-color: #79B22F;
+    padding-top: 10px;
+}
+footer p{
+    text-align: center;
+    font-size: 20px;
+}

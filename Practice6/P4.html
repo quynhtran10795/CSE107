@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Sort the product list by the product name</h3>
+    <p id="resource"></p>
+    <button onclick="myFunction()">Sort</button>
+    <h3>Print the products in the list</h3>
+    <button onclick="window.print()">Print this page</button>
+    <h3>Add a new product to head of the list</h3>
+    <p id="unshift"></p>
+    <h3>Add a new product to tail of the list</h3>
+    <p id="push"></p>
+    <h3>Search products by the product name</h3>
+    <p id="search"></p>
+
+    <script>
+        const fruits = [{id:"#098", product:"fruits",name:"Banana", quantity:"fresh", price: 29000, image:"img/banana.jpg"},
+                        {id:"#798", product:"fruits",name:"Orange", quantity:"fresh", price: 39000, image:"img/banana.jpg"},
+                        {id:"#567", product:"fruits",name:"Apple", quantity:"fresh", price: 49000, image:"img/banana.jpg"},]
+        displayFruits();
+        function myFunction() {
+            fruits.sort(function(a, b){
+                let x = a.name.toLowerCase();
+                let y = b.name.toLowerCase();
+                if (x < y) {return -1;}
+                if (x > y) {return 1;}
+                return 0;});
+        displayFruits();
+        }
+        function displayFruits() {
+        document.getElementById("resource").innerHTML =
+            fruits[0].id + " | " + fruits[0].product+" | " + fruits[0].name+" | " + fruits[0].quantity +" | " + fruits[0].price+" | " + fruits[0].image+"<br>" +
+            fruits[1].id + " | " + fruits[1].product+" | " + fruits[1].name+" | " + fruits[1].quantity +" | " + fruits[1].price+" | " + fruits[1].image+"<br>" +
+            fruits[2].id + " | " + fruits[2].product+" | " + fruits[2].name+" | " + fruits[2].quantity +" | " + fruits[2].price+" | " + fruits[2].image+"<br>";
+        }
+        
+        fruits.unshift({id:"#097", product:"fruits",name:"Mango", quantity:"fresh", price: 29000, image:"img/banana.jpg"});
+        document.getElementById("unshift").innerHTML =
+            fruits[0].id + " | " + fruits[0].product+" | " + fruits[0].name+" | " + fruits[0].quantity +" | " + fruits[0].price+" | " + fruits[0].image+"<br>" +
+            fruits[1].id + " | " + fruits[1].product+" | " + fruits[1].name+" | " + fruits[1].quantity +" | " + fruits[1].price+" | " + fruits[1].image+"<br>" +
+            fruits[2].id + " | " + fruits[2].product+" | " + fruits[2].name+" | " + fruits[2].quantity +" | " + fruits[2].price+" | " + fruits[2].image+"<br>"+
+            fruits[3].id + " | " + fruits[3].product+" | " + fruits[3].name+" | " + fruits[3].quantity +" | " + fruits[3].price+" | " + fruits[3].image+"<br>";
+
+        fruits.push({id:"#097", product:"fruits",name:"Mango", quantity:"fresh", price: 29000, image:"img/banana.jpg"});
+        document.getElementById("push").innerHTML =
+            fruits[0].id + " | " + fruits[0].product+" | " + fruits[0].name+" | " + fruits[0].quantity +" | " + fruits[0].price+" | " + fruits[0].image+"<br>" +
+            fruits[1].id + " | " + fruits[1].product+" | " + fruits[1].name+" | " + fruits[1].quantity +" | " + fruits[1].price+" | " + fruits[1].image+"<br>" +
+            fruits[2].id + " | " + fruits[2].product+" | " + fruits[2].name+" | " + fruits[2].quantity +" | " + fruits[2].price+" | " + fruits[2].image+"<br>"+
+            fruits[3].id + " | " + fruits[3].product+" | " + fruits[3].name+" | " + fruits[3].quantity +" | " + fruits[3].price+" | " + fruits[3].image+"<br>";
+
+        for (let x in fruits.name){
+            document.getElementById("search").innerHTML = x;
+
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Changes</title>
+    <style>
+        /* Initial styles for better visualization */
+        .example {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #000; /* Added border for better visualization */
+        }
+
+        a{
+            text-decoration:underline; /* Remove underline */
+            color: blue; /* Inherit the color */
+        }
+
+        .Title{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sample content -->
+<div>
+    <p class="example">This is the first paragraph with class "example".</p>
+    <p class="example">Another paragraph with class "example".</p>
+    <p>This is a regular paragraph.</p>
+</div>
+
+<a href="#">Link with target attribute</a><br><br>
+<a href="#">Another link with target attribute</a>
+
+<h1 class="Title">Title 1</h1>
+<h2 class="Title">Title 2</h2>
+
+<button onclick="changeStyles()">Change</button>
+
+<script>
+    function changeStyles() {
+        // Add background color to the first p element with class "example"
+        var exampleParagraph = document.querySelector('.example:first-of-type');
+        if (exampleParagraph) {
+            exampleParagraph.style.backgroundColor = 'yellow';
+        }
+
+        // Change margin, padding, and add a border to all elements with class "example"
+        var exampleElements = document.querySelectorAll('.example');
+        exampleElements.forEach(function(element) {
+            element.style.margin = '15px';
+            element.style.padding = '8px';
+            element.style.border = '2px solid green';
+        });
+
+        // Add a red border and remove underline to all links with a target attribute
+        var linksWithTarget = document.querySelectorAll('a');
+        linksWithTarget.forEach(function(link) {
+            link.style.border = '2px solid red';
+            link.style.textDecoration = 'none';
+        });
+
+        // Change the color of all h1 and h2 elements with class "Title"
+        var titleElements = document.querySelectorAll('.Title');
+        titleElements.forEach(function(title) {
+            title.style.color = 'orange';
+        });
+    }
+</script>
+
+</body>
+</html>

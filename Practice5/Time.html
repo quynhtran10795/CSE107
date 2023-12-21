@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GetDateTime() {
+            const d = new Date();
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let day = days[d.getDay()];
+            let month = months[d.getMonth()];
+            document.write("<p id='demo'></p>")
+            document.getElementById("demo").innerHTML = d;
+            document.write("<b>" + "Now : " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + "<br>");
+            document.write("<font color=blue> Today :" + day + ", " + month + " " + d.getDate() + "th," + d.getFullYear() + "</font></b>");
+        }
+    </script>
+</head>
+
+<body onload="GetDateTime()">
+
+</body>
+
+</html>

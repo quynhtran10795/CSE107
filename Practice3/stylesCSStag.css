@@ -1,0 +1,33 @@
+p.cssStyle{
+    color:brown;
+    font-size: 2em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    line-height: 60px;
+    text-decoration: underline;
+    background-color: aqua;
+    background-image: url(html5.jpg);
+    background-size: auto;
+    border-top: #ff0000 solid 2px;
+    border-bottom: blue solid 3px;
+    border-left: orange solid 5px;
+    border-right: green solid 6px;
+    width: 500px;
+    text-align: center;
+}
+*{
+    margin: 20px;
+    padding: 20px;
+}
+div{
+    border: 1px solid red;
+}
+p.padding{
+    background: yellow;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 400px;
+}

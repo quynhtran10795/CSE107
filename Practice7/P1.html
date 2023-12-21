@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Href Values</title>
+</head>
+<body>
+    <p>Problem 1. Replace all href values</p>
+    <a href="" title="click here">Website 1</a><br>
+    <a href="" title="click here">Website 2</a><br>
+    <a href="" title="click here">Website 3</a><br>
+<script>
+    function replaceHrefValues(newHref) {
+        // Get all anchor elements on the page
+        var links = document.querySelectorAll('a');
+
+        // Loop through each anchor element and replace the href value
+        links.forEach(function(link) {
+            link.href = newHref;
+        });
+    }
+
+    // Example usage:
+    var newHrefValue = 'https://www.w3schools.com/js/default.asp';
+    replaceHrefValues(newHrefValue);
+</script>
+
+</body>
+</html>

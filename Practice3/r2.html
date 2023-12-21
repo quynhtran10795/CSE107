@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Book Store</title>
+    <link rel="stylesheet" href="CSSregister.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="img_Practice3\logoABCbook.png" alt="logo the ABC Book Store">
+        </div>
+        <div id="login">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i><a href="Login.html"> Log in</a>
+            <a class="last" href="Registration.html">Registration</a>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i> <a class="last" href="#">Cart</a>
+        </div>
+    </header>
+
+    <nav>
+        <div id="subnav">
+            <input type="text" size="50" name="tsearch" placeholder="Enter the title of the book...">
+            <input type="submit" value="Find books" title="Find books" size="30px">
+        </div> 
+        <div id="gnav">
+            <ul>
+                <li><a href="Homepage.html"> HOME PAGE</a></li>
+                <li><a href="Introduce.html"> INTRODUCTION </a></li>
+                <li class="last"><a href="#"> CONTACT</a></li>
+            </ul>
+        </div>    
+    </nav>
+
+    <div id="body">
+        <article>
+            <aside id="left">
+                <div>
+                    <p>BOOKS BY SUBJECT<p>
+                    <ul type="square">
+                        <li> <a href="#">Foreign language</a> </li>
+                        <li> <a href="#">Information technology</a> </li>
+                        <li> <a href="#">Law</a> </li>
+                        <li> <a href="#">Literature</a> </li>
+                        <li> <a href="#">Science and technology</a> </li>
+                        <li> <a href="#">Agriculture</a> </li>
+                        <li> <a href="#">History of geography</a> </li>
+                        <li> <a href="#">Economics</a> </li>
+                        <li> <a href="#">Listen to the song</a> </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p>BOOKS BY PUBLISHER<p>
+                    <ul>
+                        <li> <a href="#">Young publishers</a> </li>
+                        <li> <a href="#">Statistics Publishing House</a> </li>
+                        <li> <a href="#">Bronze needle</a> </li>
+                        <li> <a href="#">National University</a> </li>
+                        <li> <a href="#">Artistic craft culture</a> </li>
+                        <li> <a href="#">Culture</a> </li>
+                        <li> <a href="#">History of geography</a> </li>
+                        <li> <a href="#">Labor-Society</a> </li>
+                        <li> <a href="#">Science & Engineering</a> </li>
+                    </ul>
+                </div>
+
+            </aside>
+
+            <section>
+                <p>MEMBER REGISTRATION</p>
+                <div>
+                    <form action="#" name="registration" method="post">
+                        <fieldset id="personal">
+                            <legend><b> Personal information </b></legend>
+                                <label for="fullname">Full name: </label>
+                                <input type="text" id="fullname" required name="fullname" size="30"><br>
+                                
+                                <label for="birthday">Birthday: </label>
+                                    <select name="day" id="birthday">
+                                        <option value="01" selected>01</option>
+                                        <option value="02">02</option>
+                                    </select>
+                                <label for="month"> Month</label>
+                                    <select name="month" id="birthday">
+                                        <option value="01" selected>01</option>
+                                        <option value="02">02</option>
+                                    </select>
+                                <label for="year"> Year</label>
+                                <input type="text" id="birthday" name="year" required size="5"><br>
+                                
+                                <label for="Gender">Gender:</label>
+                                <input type="radio" name="Gender" value="Male" checked> Male
+                                <input type="radio" name="Gender" value="Female"> Female
+                                <br>
+                                <label for="address"> Address:</label>
+                                <textarea name="address" id="address" cols="30" rows="3" required></textarea>
+                                <br>
+                                <label for="phone"> Telephone: </label>
+                                <input type="tel" id="phone" name="phone" size="30">
+                                <br>
+                                <label for="email"> Email: </label>
+                                <input type="text" id="email" name="email" required size="30"> 
+                        </fieldset>
+                        <fieldset id="credential">
+                            <legend><b> Credentials </b></legend>
+                            <label for="username"> Username: </label>
+                            <input type="text" name="username" size="25" required><br>
+
+                            <label for="pwd"> Password: </label>
+                            <input type="password" id="pwd" required name="pwd" minlength="8"  size="25"><br>
+
+                            <label for="confirmpwd"> Confirm password:</label>
+                            <input type="password" id="confirmpwd" required name="confirmpwd" minlength="8"  size="25"> 
+                        </fieldset><br>
+                        <input type="submit" value="Login" >
+                        <input type="reset" value="Cancel">
+                    </form>
+                </div>
+            </section>
+
+            <aside id ="right">
+                <div id="bestseller">
+                    <p>BESTSELLER</p>
+                    <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()">
+                    <a href="#"><img src="img_Practice3\EnglishForTech.jpg" >English For Tech</a>
+                    </marquee>
+                    <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()">
+                    <a href="#"><img src="img_Practice3\BARC.png" >BARC Computer Science</a>
+                    </marquee>
+                    <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()">
+                    <a href="#"><img src="img_Practice3\Davinci.png" >The Davinci Code</a>
+                    </marquee>
+                    <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()">
+                    <a href="#"><img src="img_Practice3\harrypotter.png">Harry Potter</a>
+                    </marquee>
+                </div>
+
+                <div id="linkweb">
+                    <p>THE WEBSITE LINKS</p>
+                    <select name="linkweb">
+                        <option selected>--- Select the linking page ---</option>
+                        <option value="https://lib.eiu.edu.vn/" >Eastern International University Library</option>
+                        <option value="https://eiu.edu.vn/">Eastern International University</option>
+                    </select>
+                </div>
+                <div id ="access">
+                    <p>ACCESS STATISTICS</p>
+                    <h4>Total Access: 500</h4>
+                    <h4>Online: 3</h4>
+                </div>
+                                  
+            </aside>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>©2016 -  ABC BookStror. Allright Reserved</p>
+        <p>Website is developed to be used as a hands-on exercise in Web Programming</p>
+        <p>Email: abcbookstore@gmail.com</p>
+    </footer>
+</body>
+</html>

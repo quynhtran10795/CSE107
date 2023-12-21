@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr{
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+        table tr th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>str</th>
+            <th>parseInt(str)</th>
+            <th>parseFloat(str)</th>
+            <th>Number(str)</th>
+            <th>+str</th>
+            <th>str | 0</th>
+        </tr>
+        <tr>
+            <td>1234 <br>
+                1234abc <br>
+                0.15 <br>
+                3.14ivan <br>
+                Infinity <br>
+                99999999999999999999
+            </td>
+            <td id ="parseInt">? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ?
+            </td>
+            <td id ="parseFloat">? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ?
+            </td>
+            <td id ="Number">? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ?
+            </td>
+            <td id="addStr">? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ?
+            </td>
+            <td id="ORStr">? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ? <br>
+                ?
+            </td>
+        </tr>
+    </table>
+    <button id="myBtn">Result</button>
+    <script>
+        const str = ["1234", "1234abc","0.15","3.14ivan", "Infinity","99999999999999999999"]
+        let textParseInt = "";
+        let textParseFloat = "";
+        let textNumber ="";
+        let textAddStr ="";
+        let textORStr ="";
+        for (let x of str){
+            textParseInt += parseInt(x)+"<br>";
+            textParseFloat += parseFloat(x)+"<br>";
+            textNumber += Number(x) +"<br>";
+            textAddStr += x + x +"<br>";
+            textORStr += (x|0) + "<br>";
+        }
+        document.getElementById("myBtn").onclick = displayPasingNum;
+        function displayPasingNum() {
+        document.getElementById("parseInt").innerHTML = textParseInt;
+        document.getElementById("parseFloat").innerHTML = textParseFloat;
+        document.getElementById("Number").innerHTML = textNumber;
+        document.getElementById("addStr").innerHTML = textAddStr;
+        document.getElementById("ORStr").innerHTML = textORStr;
+            }
+    </script>
+        
+</body>
+
+</html>
